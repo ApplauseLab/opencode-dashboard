@@ -1,0 +1,26 @@
+{
+  "name": "opencode-dashboard",
+  "version": "0.1.0",
+  "description": "Local dashboard for visualizing OpenCode SQLite token usage.",
+  "type": "module",
+  "bin": {
+    "opencode-dashboard": "./server.ts"
+  },
+  "files": [
+    "public",
+    "server.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "bun run server.ts",
+    "start": "bun run server.ts"
+  },
+  "keywords": [
+    "opencode",
+    "analytics",
+    "dashboard",
+    "sqlite",
+    "bun"
+  ],
+  "license": "MIT"
+}

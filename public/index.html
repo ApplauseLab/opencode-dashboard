@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenCode Token Analytics</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">OpenCode SQLite Analytics</p>
+          <h1>Token usage by project and day</h1>
+          <p id="source" class="source">Loading local database...</p>
+        </div>
+        <div class="controls">
+          <label>
+            Project
+            <select id="projectFilter">
+              <option value="all">All projects</option>
+            </select>
+          </label>
+        </div>
+      </header>
+
+      <section class="stats" id="stats"></section>
+
+      <section class="grid">
+        <article class="card span-2">
+          <div class="card-head">
+            <div>
+              <h2>Token Usage Over Time Per Project</h2>
+              <p>Daily totals from session token counters, grouped by project.</p>
+            </div>
+          </div>
+          <div id="projectChart" class="chart"></div>
+        </article>
+
+        <article class="card span-2">
+          <div class="card-head">
+            <div>
+              <h2>Daily Token Usage</h2>
+              <p>Total tokens per day, split by token category.</p>
+            </div>
+          </div>
+          <div id="dailyChart" class="chart"></div>
+        </article>
+
+        <article class="card">
+          <h2>Top Projects</h2>
+          <div id="projectList" class="project-list"></div>
+        </article>
+
+        <article class="card">
+          <h2>Daily Breakdown</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Total</th>
+                  <th>Input</th>
+                  <th>Output</th>
+                  <th>Reasoning</th>
+                  <th>Cache</th>
+                </tr>
+              </thead>
+              <tbody id="dailyTable"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
