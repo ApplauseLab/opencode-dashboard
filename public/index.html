@@ -11,7 +11,7 @@
       <header class="hero">
         <div>
           <p class="eyebrow">OpenCode SQLite Analytics</p>
-          <h1>Token usage by project and day</h1>
+          <h1>Token usage and cost by project</h1>
           <p id="source" class="source">Loading local database...</p>
         </div>
         <div class="controls">
@@ -47,9 +47,29 @@
           <div id="dailyChart" class="chart"></div>
         </article>
 
+        <article class="card span-2">
+          <div class="card-head">
+            <div>
+              <h2>Known Daily Cost</h2>
+              <p id="pricingNote">Official pricing is used only for matched models.</p>
+            </div>
+          </div>
+          <div id="costChart" class="chart"></div>
+        </article>
+
         <article class="card">
           <h2>Top Projects</h2>
           <div id="projectList" class="project-list"></div>
+        </article>
+
+        <article class="card">
+          <h2>Costs By Provider</h2>
+          <div id="providerList" class="project-list"></div>
+        </article>
+
+        <article class="card span-2">
+          <h2>Costs By Model</h2>
+          <div id="modelList" class="project-list"></div>
         </article>
 
         <article class="card">
@@ -60,6 +80,7 @@
                 <tr>
                   <th>Day</th>
                   <th>Total</th>
+                  <th>Cost</th>
                   <th>Input</th>
                   <th>Output</th>
                   <th>Reasoning</th>
